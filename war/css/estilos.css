@@ -1,0 +1,25 @@
+body{
+	padding-top: 51.4px;
+}
+
+.my-estilo{
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-right: 20px; 
+}
+.jumbotron{
+	background: #428BCA;
+	color: #fff;
+	font-size: 100px;
+	margin-bottom: 0 !important;
+}
+nav.navbar{
+	margin-bottom: 0;
+}
+.main{
+	background: #FFF2CE;
+	padding-top: 25px;
+}
+.titular{
+ color: #FF030F;
+}

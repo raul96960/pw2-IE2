@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Pw2_IE2</servlet-name>
+		<servlet-class>pw2.Pw2_IE2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Pw2_IE2</servlet-name>
+		<url-pattern>/pw2_ie2</url-pattern>
+	</servlet-mapping>
+	
+	<!--Servlet que se Usan en el Proyecto  -->
+	<servlet>
+		<servlet-name>AgregarUsuario</servlet-name>
+		<servlet-class>pw2.AgregarUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AgregarUsuario</servlet-name>
+		<url-pattern>/addUser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>IniciarSession</servlet-name>
+		<servlet-class>pw2.IniciarSession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IniciarSession</servlet-name>
+		<url-pattern>/iniciarSession</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InhabilitandoUsuarios</servlet-name>
+		<servlet-class>pw2.Inhabilitando_Usuarios</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InhabilitandoUsuarios</servlet-name>
+		<url-pattern>/inhabilitarUsuarios</url-pattern>
+	</servlet-mapping>
+	
+		
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+</web-app>
