@@ -15,10 +15,10 @@ public class Inhabilitando_Usuarios extends HttpServlet {
 	public void doGet(HttpServletRequest req,HttpServletResponse resp)throws IOException,ServletException {
 			String[] llaves=req.getParameterValues("idEmail");
 			if(llaves==null){
-				resp.sendRedirect("ListUsuarios.jsp");
+				resp.sendRedirect("pageAdmin.jsp");
 			}else{				
 				Utilidades_Metodos.inhabilitarUsuarios(llaves);
-				resp.sendRedirect("ListUsuarios.jsp");
+				resp.sendRedirect("pageAdmin.jsp");
 			}
 	}
 	public void doPost(HttpServletRequest req,HttpServletResponse resp)throws IOException,ServletException  {

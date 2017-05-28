@@ -32,7 +32,7 @@ public class AgregarUsuario extends HttpServlet {
 			Utilidades_Metodos.addUser(req.getParameter("email"), req.getParameter("nombre"), 
 									   req.getParameter("apellidos"), edad,req.getParameter("rol"));
 			
-			resp.sendRedirect("index.jsp");
+			resp.sendRedirect("index.jsp?success=exito");
 		}catch (NumberFormatException e){
 			errorEdad="true";
 			String errorFormatoEdad="true";

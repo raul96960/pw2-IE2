@@ -1,5 +1,4 @@
-<%@ page import="pw2.*,java.util.List,
-				javax.servlet.http.HttpSession" %>
+<%@ page import="pw2.*,java.util.List" %>
 <%! String sessionServletURL;%>
 <%! String textoBoton; %>
 <%! boolean inicioSession; %>
@@ -15,6 +14,6 @@
 		sessionServletURL="/cerrarSession";
 		textoBoton="Cerrar Session";
 		inicioSession=true;
-	}	
+	}
 	//Falta implementar la seguridad es decir los permisos si inicio la session
 %>

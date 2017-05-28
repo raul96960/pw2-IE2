@@ -1,4 +1,3 @@
-<%@ include file="CambiarAspectosnavbar.jsp" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -9,7 +8,11 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	<title>Inicio</title>
 </head>
-<body>
+<body>	
+		<%--Aviso de Registro de Usuario de forma exitosa--%>
+		<% if(request.getParameter("success")!=null){ %>
+				<script> alert("Se Registro de forma exitosa");</script>
+		<%}%>
 		<!-- Barra de Navegacion -->
 			<%@ include file="navbar.jsp" %>
 		<!-- Fin de la Barra de navegacion -->

@@ -1,13 +1,4 @@
 
-<%@ include file="CambiarAspectosnavbar.jsp" %>  <%-- <=== Aqui obtenemos la el Object Usuario y su rol, adicional se cambia unos aspectod de navbar --%>
-<%@ include file="fragmentoparaAccederporsuRol.jsp"%> <%--  <=== Aqui verifica que inicio session --%>
-<%	// se Verifica si no es Administrador
-	if(rolUsuario.getTipo()!=1)
-		response.sendRedirect("index.jsp");
-%>
-<% List<Usuario> usuarios=Utilidades_Metodos.getListaUsuarios(); %>
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -23,9 +14,11 @@
 		<!-- Barra de Navegacion -->
 			<%@ include file="navbar.jsp" %>
 		<!-- Fin de la Barra de navegacion -->
-		
-		
-		
+		<%	// se Verifica si no es Administrador
+			if(rolUsuario.getTipo()!=1)
+			  response.sendRedirect("index.jsp");
+		%>
+		<% List<Usuario> usuarios=Utilidades_Metodos.getListaUsuarios(); %>
 		<% if(usuarios.isEmpty()){ %>
 			<br>
 			<p> No existen Usuarios, para crear un usuario <a href="registrarUsuario.jsp">Ir Agregar Usuario</a></p>

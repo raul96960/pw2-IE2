@@ -1,9 +1,5 @@
 
-<%@ include file="CambiarAspectosnavbar.jsp" %>
-<%@ include file="fragmentoparaAccederporsuRol.jsp"%>
-<%	if(rolUsuario.getTipo()==1)
-		response.sendRedirect("pageWelcome.jsp");
-%>	
+
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -21,6 +17,10 @@
 	<!-- Barra de Navegacion -->
 			<%@ include file="navbar.jsp" %>
 	<!-- Fin de la Barra de navegacion -->
+	
+	<%	if(rolUsuario.getTipo()==1)
+		response.sendRedirect("pageWelcome.jsp");
+	%>	
 	
 	<div class="container">
 		<div class="row">

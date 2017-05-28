@@ -1,19 +1,4 @@
 
-
-<%@ include file="CambiarAspectosnavbar.jsp" %>
-<%@ include file="fragmentoparaAccederporsuRol.jsp"%>
-<% 
-	String imgRolURL="imagenes/img-Roles/"+Utilidades_Metodos.getImagenRol(rolUsuario.getTipo());
-
-	String estadoUser=Utilidades_Metodos.getEstadoRolorUser(usuario.getEstado());
-	String estadoRolUser=Utilidades_Metodos.getEstadoRolorUser(rolUsuario.getEstado());;
-	String permiso;
-	if(!rolUsuario.getEstado() || !usuario.getEstado())
-		permiso="disabled";
-	else
-		permiso="";
-%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -29,6 +14,22 @@
 	<!-- Barra de Navegacion -->
 			<%@ include file="navbar.jsp" %>
 	<!-- Fin de la Barra de navegacion -->
+	
+	<% if(!inicioSession){response.sendRedirect("index.jsp");}%>
+	
+	<% 
+	String imgRolURL="imagenes/img-Roles/"+Utilidades_Metodos.getImagenRol(rolUsuario.getTipo());
+
+	String estadoUser=Utilidades_Metodos.getEstadoRolorUser(usuario.getEstado());
+	String estadoRolUser=Utilidades_Metodos.getEstadoRolorUser(rolUsuario.getEstado());;
+	String permiso;
+	if(!rolUsuario.getEstado() || !usuario.getEstado())
+		permiso="disabled";
+	else
+		permiso="";
+%>
+	
+	
 	<div class="container">
 		<div class="page-header"><h1>Bienvenido  <b><%=rolUsuario.getNombre() %></b> </h1></div>
 	</div>
@@ -49,9 +50,9 @@
 			<div class="col-xs-12 col-md-1 col-md-offset-5">
 			
 				<%if(rolUsuario.getNombre().equals("Administrador")){ %>
-					<a href="pageAdmin" class="btn btn-success">Ingresar</a>
+					<a href="pageAdmin.jsp" class="btn btn-success">Ingresar</a>
 				<%}else{ %>
-					<a href="pageUsuarios" class="btn btn-success <%=permiso%>">Ingresar</a>
+					<a href="pageUsuarios.jsp" class="btn btn-success <%=permiso%>">Ingresar</a>
 				<%}%>
 			</div>
 		</div>
