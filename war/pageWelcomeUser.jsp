@@ -35,8 +35,8 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-offset-3 col-md-6">
-				<img src="<%=imgRolURL%>" alt="Imagen del Usuario deacuerdo a su Rol" class="img-responsive">
+			<div class="col-md-6 col-md-offset-3">
+				<img src="<%=imgRolURL%>" style=" height: 600px; width: 850px;" alt="Imagen del Usuario deacuerdo a su Rol" class="img-responsive">
 			</div>
 		</div>
 		<div class="row">

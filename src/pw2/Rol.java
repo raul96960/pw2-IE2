@@ -33,7 +33,6 @@ public class Rol implements Serializable {
 	public String getIdEmail() {
 		return idEmail;
 	}
-
 	public void setKeyIdEmail(String idEmail) {
 		this.idEmail = idEmail;
 	}

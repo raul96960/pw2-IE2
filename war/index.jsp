@@ -109,6 +109,61 @@
 			</div>
 		</div>
 		<!-- Fin del cuerpo principal -->
+
+		<!-- Ventana Modal  con el formulario de buscar hijo  -->
+    <div class="modal fade active" id="buscarHijo">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-titule">INGRESE LOS DATOS DE SU HIJO:</h4>
+          </div>
+          <div class="modal-body">
+	            <form action="/getLista" class="form-horizontal" method="POST">
+	                <!-- CUERPO DEL FORMULARIO -->
+	              	<div class="form-group">
+			          <label class="control-label col-md-offset-2 col-md-2" >Nombre:</label>
+			          <div class="col-md-3"> 
+			            <input type="text" class="form-control" name="nombre" required placeholder="Nombre de su hijo">
+			          </div>
+	        		</div>
+			        <div class="form-group">
+			          <label class="control-label col-md-offset-2 col-md-2" >Apellido:</label>
+			          <div class="col-md-3"> 
+			            <input type="text" class="form-control" name="apellido" required placeholder="Apellido de su hijo">
+			          </div>
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-3 col-md-offset-4"> 
+			            <input type="submit" class="btn btn-primary" value="BUSCAR" >
+			          </div>
+			        </div>
+	      		</form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<div class="container hidden">
+				
+			  	<form action="/borrarLista" method="POST">
+		
+					<div class="form-group">
+						<label for="seleccion">Listar Usuarios...</label>
+						<select name="tipo" class="form-control" id="seleccion">
+							<option value="1">Administradores</option>
+							<option value="2">Directores</option>
+							<option value="3">Profesores</option>
+							<option value="4">Auxiliares</option>
+							<option value="5">Apoderados</option>
+							<option value="6">Alumnos</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary" value="Listar">
+					</div>
+				</form>
+			</div>	
 	
 	<script src="Jquery/jquery-1.11.1.js"></script>
 	<script src="js/bootstrap.min.js"></script>

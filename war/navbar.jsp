@@ -47,19 +47,42 @@
 								</a>
 							<%} %>
 							<ul class="nav navbar-nav navbar-right">
-								<li class="active"><a href="index.jsp">Inicio</a></li>
-								<li><a href="#">Servicios</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toogle" data-toggle="dropdown" role="button">
-										Acerca de ... <span class="caret"></span>
-									</a>
-									<ul class="dropdown-menu">
-												<li><a href="nosotros.jsp">Nosotros</a></li>
-												<li><a href="mision_y_vision.jsp">Mision y Vision</a></li>
-												<li><a href="organigrama.jsp">Organigrama</a></li>
-									</ul>		
-								</li>
-								<li><a href="contactenos.jsp">Contactenos</a></li>
+									<li class="active"><a href="index.jsp">Inicio</a></li>
+
+								<!-------------- Se agrego 10/07/17 10:30 pm --------------------->
+								
+								<%if(!inicioSession){%>
+									<li><a href="#">Servicios</a></li>
+								<%}else{ %>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toogle" data-toggle="dropdown" role="button">
+											Servicios <span class="caret"></span>
+										</a>
+										<ul class="dropdown-menu">
+												<%for(int i=0;i<servicios.size();i+=2){%>
+													<% if(servicios.get(i).equals("Buscar Hijo(a)")) {%>										
+														<li> <a href="<%=servicios.get(i+1)%>" data-toggle="modal" ><%=servicios.get(i)%> </a></li>
+													<%}else{ %>
+														<li> <a href="<%=servicios.get(i+1)%>"><%=servicios.get(i)%></a></li>
+													<%}%>
+												<%} %>
+											
+										</ul>
+										
+									</li>
+								<%}%>
+								<!--------------- FIN -------------------->
+									<li class="dropdown">
+										<a href="#" class="dropdown-toogle" data-toggle="dropdown" role="button">
+											Acerca de ... <span class="caret"></span>
+										</a>
+										<ul class="dropdown-menu">
+													<li><a href="nosotros.jsp">Nosotros</a></li>
+													<li><a href="mision_y_vision.jsp">Mision y Vision</a></li>
+													<li><a href="organigrama.jsp">Organigrama</a></li>
+										</ul>		
+									</li>
+									<li><a href="contactenos.jsp">Contactenos</a></li>
 							</ul>
 								</div>
 					</div>

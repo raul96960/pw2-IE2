@@ -25,6 +25,14 @@ public class Usuario implements Serializable {
 	@Persistent
 	private boolean estado;
 	
+	//Atributos de Alumno
+	@Persistent
+	private int nota1;
+	@Persistent
+	private int nota2;
+	@Persistent
+	private int nota3;
+	
 	public Usuario(){}
 	
 	
@@ -33,6 +41,9 @@ public class Usuario implements Serializable {
 		this.apellidos = apellidos;
 		this.edad = edad;
 		this.estado=true;
+		this.nota1=0;
+		this.nota2=0;
+		this.nota3=0;
 	}
 	public String getIdEmail() {
 		return idEmail;
@@ -71,6 +82,36 @@ public class Usuario implements Serializable {
 
 	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+
+
+	public int getNota1() {
+		return nota1;
+	}
+
+
+	public void setNota1(int nota1) {
+		this.nota1 = nota1;
+	}
+
+
+	public int getNota2() {
+		return nota2;
+	}
+
+
+	public void setNota2(int nota2) {
+		this.nota2 = nota2;
+	}
+
+
+	public int getNota3() {
+		return nota3;
+	}
+
+
+	public void setNota3(int nota3) {
+		this.nota3 = nota3;
 	}
 	
 }
